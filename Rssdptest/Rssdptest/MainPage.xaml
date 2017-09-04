@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Rssdptest"
              x:Class="Rssdptest.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <Button Text="{Binding Test1}" Command="{Binding TestCommand}"/>
+        <Label Text="{Binding Test2, Mode=TwoWay}"/>
+        <Label Text="{Binding DeviceCount, StringFormat='{0}'}"/>
+        <ListView ItemsSource="{Binding DeviceNames}"/>
+    </StackLayout>
 
 </ContentPage>

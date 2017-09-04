@@ -12,6 +12,7 @@ namespace Rssdptest
 		public MainPage()
 		{
 			InitializeComponent();
+            BindingContext = new CommunicationController();
 		}
 	}
 }
